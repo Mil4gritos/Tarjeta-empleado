@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milagros Arana</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+
+
+    <div class="contenedor">
+
+
+        <!--aspecto visual de la tarjeta de empleado-->
+
+        <section class="tarjeta" id="tarjetas">
+
+            <div class="anverso" id="fondo">
+                <div class="flex">
+                    <div class="imagen" id="imagenPerfil">
+                        <img src="img/avatar.png" id="imagen-perfil">
+                    </div>
+                    <div class="imagenLogo" id="imagenLogo">
+                        <img src="img/Logotipo 500x500 px (1).png" id="imagen-logo" onclick="CambiarLogo()">
+                    </div>
+
+                </div>
+                <div class="grupo">
+                    <p class="dato">Empresa:</p>
+                    <p class="empresa" id='empresa'>########</p>
+
+
+                </div>
+
+                <div class="grupo">
+                    <p class="dato">Nombre:</p>
+                    <p class="nombre" id='nombre'>#####</p>
+
+                </div>
+
+
+                <div class="grupo">
+                    <p class="dato">Número de empleado:</p>
+                    <p class="numero" id='numero'>#########</p>
+
+                </div>
+
+                <div class="grupo">
+                    <p class="dato">Cargo:</p>
+                    <p class="cargo" id="cargo">#######</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Boton despegable del formulario-->
+
+
+        <div class="contenedor-btn">
+
+            <button class="abrir-formulario active" id="abrirFormulario">
+                <i class="fas fa-plus"></i>
+            </button>
+
+        </div>
+
+        <!--formulario de datos-->
+
+        <form action="" id="formularioTarjeta" class="formulario-tarjeta active" method="post" enctype="multipart/form-data">
+
+            <div class="grupo">
+                <label for="inputEmpresa">Empresa</label>
+                <input type="text" id="inputEmpresa" maxlength="19" autocomplete="off">
+            </div>
+            <div class="grupo">
+                <label for="inputNombre">Nombre de empleado</label>
+                <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+            </div>
+            <div class="grupo">
+                <label for="inputNumero">Número de empleado</label>
+                <input type="number" id="inputNumero" minlength="1" maxlength="19" autocomplete="off">
+            </div>
+            <div class="grupo">
+                <label for="fileUpload" class="subir">Sube tu foto</label>
+                <input type="file" id="fileUpload" name = "imagen[0]" onchange="previsualiza()">
+            </div>
+
+            <div class="flex">
+                <div class="grupoFlex">
+                    <div class="grupoCargo">
+                        <label for="color">Cargo</label>
+                        <select class="selectCargo" name="listaCargos">
+                            <option value="0" disabled selected>Selecciona</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Promotor">Promotor</option>
+                            <option value="Técnico">Técnico</option>
+                            <option value="Músico">Músico</option>
+                        </select>
+                    </div>
+
+                    <div class="grupoColor">
+                        <label for="inputcolor">Color de fondo</label>
+                        <input type="color" id="inputColor" value="#ff000" onchange="cambiarColor()" />
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div>
+
+
+                <!--Boton de borrar datos -->
+   
+                <button type="submit" class="boton" id="btn" value="reiniciar">Reiniciar</button>
+
+            </div>
+        </form>
+
+
+    </div>
+
+<script src="main.js"></script>
+</body>
+
+</html>

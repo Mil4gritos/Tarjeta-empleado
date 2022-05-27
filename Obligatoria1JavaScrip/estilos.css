@@ -1,0 +1,243 @@
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+ body{
+     background-color: rgb(219, 228, 245);
+     font-family: 'Courier New', Courier, monospace;
+ }
+ img{
+
+    max-height: 100%;
+    max-width: 100%;
+    padding: 10px;
+ }
+ 
+.imagen{
+    height: 100px;
+    width: 100px;
+    
+    
+
+}
+
+.imagenLogo{
+    text-align: right;
+    height: 100px;
+    width: 200px;
+    object-fit: cover;
+    max-width: 200px;
+    
+}
+.flex{
+
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+
+
+
+.contenedor{
+
+    width: 90%;
+    max-width: 1000px;
+    padding: 40px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*----------estilos de la tarjeta---------*/
+
+.tarjeta{
+
+width: 100%;
+max-width: 550px;
+position: relative;
+color: white;
+transition: .3s ease all;
+transform: rotateY(0deg);
+transform-style: preserve-3d;
+backface-visibility: hidden;
+cursor: pointer;
+z-index: 2;
+
+
+
+}
+.contenedor .tarjeta.active { 
+    transform: rotateY(180deg);
+}
+
+
+
+.tarjeta > div {
+
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
+}
+
+.tarjeta .anverso{
+
+   width: 100%;
+   background:white; 
+}
+
+.grupo{
+    font-size: 15px;
+    color: grey;
+    padding: 3px;
+}
+
+.empresa,
+.nombre,
+.numero,
+.cargo{
+
+    font-size: 15px;
+    color: rgb(75, 74, 74);
+    text-transform: uppercase;
+
+}
+
+ .contenedor-btn .abrir-formulario {
+
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    background: rgb(194, 191, 191);
+    color: white;
+    position: relative;
+    top: -25px;
+    z-index: 3;
+    border-radius: 100%;
+    box-shadow: 5px 4px 8px rgba(90,116,148,0.3);
+    padding: 5px;
+    border:none;
+    cursor: pointer;
+    
+ }
+.contenedor-btn .abrir-formulario.active{
+    
+    transform: rotate(45deg);
+}
+
+
+ /* -------Formulario tarjeta--------*/
+
+ .formulario-tarjeta{
+
+    background: white;
+    width: 100%;
+    max-width: 700px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -120px;
+   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   transition: clip-path .3s ease-out;
+
+ }
+ .formulario-tarjeta.active{
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+ }
+ .formulario-tarjeta label{
+
+    display: block;
+    color:grey;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+ }
+ .formulario-tarjeta input,
+ .formulario-tarjeta select,
+.boton{
+
+    border: 1px solid rgb(194, 191, 191);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    height: 50px;
+    width: 100%;
+    padding: 5px 12px;
+    transition: .3s ease all;
+    border-radius: 5px;
+    
+
+ }
+ .formulario-tarjeta input:hover,
+ .formulario-tarjeta select:hover{
+
+    
+    border: 1px solid rgb(104, 106, 146);
+
+ }
+ .formulario-tarjeta input{
+     margin-bottom: 20px;
+     text-transform: uppercase ;
+
+ }
+ .formulario-tarjeta .boton{
+
+    border:none;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background: rgb(226, 225, 225);
+    box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
+    cursor: pointer;
+    
+ }
+ .formulario-tarjeta .boton:hover,
+ .contenedor-btn .abrir-formulario:hover{
+
+    background: grey;
+ }
+ .flex .grupoFlex{
+
+   
+    margin-bottom: 5px;
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+ }
+ .grupoFlex 
+ .grupoCargo{
+
+  margin-right: 5px;
+  width: 100%;
+  
+
+ }
+ .grupoColor{
+    width: 100%;
+ }
+ 
+ 
+ 
+#selectColor,
+#selectCargo{
+
+    font-family: 'Courier New', Courier, monospace;
+    color: grey;
+}
+
+ 
